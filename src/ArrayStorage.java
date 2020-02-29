@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Array based storage for Resumes
  */
@@ -18,6 +16,9 @@ import java.util.Arrays;
         В методе clear() обнуление массива предполагает именно обнуление (null), а не создание нового
 
 */
+
+import java.util.Arrays;
+
 public class ArrayStorage {
     Resume[] storage = new Resume[10000];
 
