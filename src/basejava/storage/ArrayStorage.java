@@ -12,6 +12,14 @@ public class ArrayStorage {
     private Resume[] storage = new Resume[10000];
     private int size = 0;
 
+    public void update(Resume resume){
+        for (int i = 0; i < size; i++) {
+            if (storage[i].getUuid().equals(resume.getUuid())) {
+                storage[i] = resume;
+            }
+        }
+    }
+
     public void clear() {
         Arrays.fill(storage, 0, size, null);
         size = 0;
