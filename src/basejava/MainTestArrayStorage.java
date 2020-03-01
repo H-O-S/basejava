@@ -8,6 +8,8 @@ import basejava.storage.ArrayStorage;
  */
 public class MainTestArrayStorage {
     static final ArrayStorage ARRAY_STORAGE = new ArrayStorage();
+    static int x = 1010;
+    static int i = 0;
 
     public static void main(String[] args) {
         Resume r1 = new Resume();
@@ -36,6 +38,15 @@ public class MainTestArrayStorage {
         printAll();
 
         System.out.println("Size: " + ARRAY_STORAGE.size());
+
+        while (i<x){
+            Resume r = new Resume();
+            r.setUuid("uuid_" + i);
+            ARRAY_STORAGE.save(r);
+            i++;
+        }
+        printAll();
+
     }
 
     static void printAll() {
